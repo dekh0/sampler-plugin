@@ -191,7 +191,7 @@ void SamplerpluginAudioProcessor::loadFile()
     juce::FileChooser chooser { "Pleace load a file" };
     if(chooser.browseForFileToOpen())
     {
-        
+        auto file = chooser.getResult();
     }
 }
 

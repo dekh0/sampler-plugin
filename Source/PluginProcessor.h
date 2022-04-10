@@ -57,7 +57,6 @@ public:
     
 private:
     //==============================================================================
-    
     juce::Synthesiser mSampler;
     const int mNumVoices { 3 };
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (SamplerpluginAudioProcessor)
