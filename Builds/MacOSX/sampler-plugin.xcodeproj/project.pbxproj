@@ -15,6 +15,7 @@
 			dependencies = (
 				A953D1E8D1B2A568D985C0FF,
 				0F9A36D05D466834FC1D4A1A,
+				40A849471F2B4DC925046945,
 				907F77BD05B4DE8BB8938846,
 			);
 			name = "sampler-plugin - All";
@@ -30,6 +31,7 @@
 		07087A5398BBE9BBE49C42A4 /* include_juce_events.mm */ = {isa = PBXBuildFile; fileRef = C01D71DAEA102A23DCF599DB; };
 		1833A9342039348B5F4A616A /* include_juce_audio_basics.mm */ = {isa = PBXBuildFile; fileRef = 41B1F5C373A5432A370A50C2; };
 		1D8DF654051A773FE94ED0B5 /* include_juce_audio_plugin_client_AU.r */ = {isa = PBXBuildFile; fileRef = 1ED153091104E5D1CB646A92; };
+		3EE9104C7F258791A695049F /* include_juce_audio_plugin_client_Standalone.cpp */ = {isa = PBXBuildFile; fileRef = 10C9FB9D27AC7AB6BAC5E897; };
 		48D4591D4B9ABF83489E57D7 /* Shared Code */ = {isa = PBXBuildFile; fileRef = 1F9B8D755793A2F5D061E78C; };
 		4D732BF5EB92668FF3C774DB /* include_juce_audio_plugin_client_VST_utils.mm */ = {isa = PBXBuildFile; fileRef = 85BBAB2E2A9E80A3E862EA6F; };
 		500AAEE21B876AAF36B55D71 /* DiscRecording.framework */ = {isa = PBXBuildFile; fileRef = 0C1B3D49DDC38132B4C134C4; };
@@ -48,6 +50,7 @@
 		A85F86780D2183B661BFB1BF /* AudioToolbox.framework */ = {isa = PBXBuildFile; fileRef = 1054B38811AE9604714B3D0E; };
 		AA0CEEDC7A8E5C58A7C7E625 /* AudioUnit.framework */ = {isa = PBXBuildFile; fileRef = 47E32B7C5F8AAF93DBF81809; };
 		B05C1748129BBA67F29AC827 /* VST3 */ = {isa = PBXBuildFile; fileRef = 5F26FB472E83CA04B450D3A4; };
+		B91C563533814AF34139BE0E /* Standalone Plugin */ = {isa = PBXBuildFile; fileRef = 35DF8ED3E23C7612160626D9; };
 		BF76F7A9BC92A0F19445F996 /* Accelerate.framework */ = {isa = PBXBuildFile; fileRef = 3F20940D4A5E29E16526A770; };
 		C4E02C25576EB24F5609A9DB /* include_juce_gui_basics.mm */ = {isa = PBXBuildFile; fileRef = D4A978DD083E7B26A766B52A; };
 		CD9D6F77003EE8B63DC9FC53 /* AU */ = {isa = PBXBuildFile; fileRef = 89E072B7A827E24C12CD8C93; };
@@ -67,6 +70,7 @@
 		0C01DF622FA8CAEF7336F36E /* CoreMIDI.framework */ /* CoreMIDI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMIDI.framework; path = System/Library/Frameworks/CoreMIDI.framework; sourceTree = SDKROOT; };
 		0C1B3D49DDC38132B4C134C4 /* DiscRecording.framework */ /* DiscRecording.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DiscRecording.framework; path = System/Library/Frameworks/DiscRecording.framework; sourceTree = SDKROOT; };
 		1054B38811AE9604714B3D0E /* AudioToolbox.framework */ /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		10C9FB9D27AC7AB6BAC5E897 /* include_juce_audio_plugin_client_Standalone.cpp */ /* include_juce_audio_plugin_client_Standalone.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = include_juce_audio_plugin_client_Standalone.cpp; path = ../../JuceLibraryCode/include_juce_audio_plugin_client_Standalone.cpp; sourceTree = SOURCE_ROOT; };
 		118CD3D832BA470379B54092 /* WebKit.framework */ /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		1ED153091104E5D1CB646A92 /* include_juce_audio_plugin_client_AU.r */ /* include_juce_audio_plugin_client_AU.r */ = {isa = PBXFileReference; lastKnownFileType = file.r; name = include_juce_audio_plugin_client_AU.r; path = ../../JuceLibraryCode/include_juce_audio_plugin_client_AU.r; sourceTree = SOURCE_ROOT; };
 		1F9AA8272D7F66DE2C2D9FC7 /* juce_gui_extra */ /* juce_gui_extra */ = {isa = PBXFileReference; lastKnownFileType = folder; name = juce_gui_extra; path = /Users/macbookprom1/Documents/juce/JUCE/modules/juce_gui_extra; sourceTree = "<absolute>"; };
@@ -77,6 +81,7 @@
 		2DBC9B4B381B5E805E73BFE0 /* include_juce_graphics.mm */ /* include_juce_graphics.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = include_juce_graphics.mm; path = ../../JuceLibraryCode/include_juce_graphics.mm; sourceTree = SOURCE_ROOT; };
 		317670B4DE195F1905DA5F57 /* juce_audio_utils */ /* juce_audio_utils */ = {isa = PBXFileReference; lastKnownFileType = folder; name = juce_audio_utils; path = /Users/macbookprom1/Documents/juce/JUCE/modules/juce_audio_utils; sourceTree = "<absolute>"; };
 		35C9CE4472D714817969A622 /* juce_gui_basics */ /* juce_gui_basics */ = {isa = PBXFileReference; lastKnownFileType = folder; name = juce_gui_basics; path = /Users/macbookprom1/Documents/juce/JUCE/modules/juce_gui_basics; sourceTree = "<absolute>"; };
+		35DF8ED3E23C7612160626D9 /* Standalone Plugin */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "sampler-plugin.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		37D07331931C186BAF3111D4 /* JuceHeader.h */ /* JuceHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = JuceHeader.h; path = ../../JuceLibraryCode/JuceHeader.h; sourceTree = SOURCE_ROOT; };
 		3F20940D4A5E29E16526A770 /* Accelerate.framework */ /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		41B1F5C373A5432A370A50C2 /* include_juce_audio_basics.mm */ /* include_juce_audio_basics.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = include_juce_audio_basics.mm; path = ../../JuceLibraryCode/include_juce_audio_basics.mm; sourceTree = SOURCE_ROOT; };
@@ -112,6 +117,7 @@
 		D4A978DD083E7B26A766B52A /* include_juce_gui_basics.mm */ /* include_juce_gui_basics.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = include_juce_gui_basics.mm; path = ../../JuceLibraryCode/include_juce_gui_basics.mm; sourceTree = SOURCE_ROOT; };
 		D560821B5E3463D06F1FF159 /* include_juce_audio_plugin_client_VST3.cpp */ /* include_juce_audio_plugin_client_VST3.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = include_juce_audio_plugin_client_VST3.cpp; path = ../../JuceLibraryCode/include_juce_audio_plugin_client_VST3.cpp; sourceTree = SOURCE_ROOT; };
 		D5E96A6D078C7013D084D326 /* JucePluginDefines.h */ /* JucePluginDefines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = JucePluginDefines.h; path = ../../JuceLibraryCode/JucePluginDefines.h; sourceTree = SOURCE_ROOT; };
+		D5EF7E31508901FCB7366ADE /* Info-Standalone_Plugin.plist */ /* Info-Standalone_Plugin.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Info-Standalone_Plugin.plist"; path = "Info-Standalone_Plugin.plist"; sourceTree = SOURCE_ROOT; };
 		D736D5F60D122BAFE5019633 /* include_juce_audio_devices.mm */ /* include_juce_audio_devices.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = include_juce_audio_devices.mm; path = ../../JuceLibraryCode/include_juce_audio_devices.mm; sourceTree = SOURCE_ROOT; };
 		DEB7455963393329C9F774C1 /* PluginProcessor.cpp */ /* PluginProcessor.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = PluginProcessor.cpp; path = ../../Source/PluginProcessor.cpp; sourceTree = SOURCE_ROOT; };
 		E395B5D8778D2815171043B2 /* include_juce_audio_plugin_client_AU_2.mm */ /* include_juce_audio_plugin_client_AU_2.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = include_juce_audio_plugin_client_AU_2.mm; path = ../../JuceLibraryCode/include_juce_audio_plugin_client_AU_2.mm; sourceTree = SOURCE_ROOT; };
@@ -120,6 +126,25 @@
 
 /* Begin PBXFrameworksBuildPhase section */
 		78EF66C37BF65AFAB808464D = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF76F7A9BC92A0F19445F996,
+				A85F86780D2183B661BFB1BF,
+				9755F66227E23B917510AAFB,
+				F73C1E52237A637465497EB4,
+				F0BB4E99D7CFA5E86141D059,
+				CF7284747E936F9EB8792CC2,
+				8F63064D28D325C38846C74F,
+				500AAEE21B876AAF36B55D71,
+				5E867B8EE46CF0F9008A80E0,
+				FAAF4842FBFDA214FC15A5E2,
+				EBC9CBBB840D66B0755B3495,
+				626195BA4F83F72BFADE67A9,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F9467AA81451EF9877E2D03 = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -174,6 +199,7 @@
 			children = (
 				5F26FB472E83CA04B450D3A4,
 				89E072B7A827E24C12CD8C93,
+				35DF8ED3E23C7612160626D9,
 				1F9B8D755793A2F5D061E78C,
 			);
 			name = Products;
@@ -227,6 +253,7 @@
 				1ED153091104E5D1CB646A92,
 				2CC9C6BFBC7AB752B1770093,
 				E395B5D8778D2815171043B2,
+				10C9FB9D27AC7AB6BAC5E897,
 				42687169D0E2D0E4FDA0FBA5,
 				85BBAB2E2A9E80A3E862EA6F,
 				D560821B5E3463D06F1FF159,
@@ -273,6 +300,7 @@
 			children = (
 				5DEAFA2CE0072C9DC60BEE5A,
 				6BDDB9AE984058098E4E6641,
+				D5EF7E31508901FCB7366ADE,
 				0B3244D5D5923C35A78CC63E,
 			);
 			name = Resources;
@@ -281,6 +309,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		5B7DECEDF4A9D352E6C3341A /* sampler-plugin - Standalone Plugin */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4E7C823FF508D01E0EAD6BD0;
+			buildPhases = (
+				0536A8C30A65BF40C7B73921,
+				4BBC429836C0381DD347FE5A,
+				8F9467AA81451EF9877E2D03,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CA121390C6AD258B0D9D9354,
+			);
+			name = "sampler-plugin - Standalone Plugin";
+			productName = "sampler-plugin";
+			productReference = 35DF8ED3E23C7612160626D9;
+			productType = "com.apple.product-type.application";
+		};
 		67429C601811341E4971C1F3 /* sampler-plugin - AU */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 56C598874A9698C600895BED;
@@ -340,9 +386,31 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 1320;
-				ORGANIZATIONNAME = "";
+				ORGANIZATIONNAME = "frogLab";
 				TargetAttributes = {
 					2DFBD9E877DD4E28C8555928 = {
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 0;
+							};
+							com.apple.HardenedRuntime = {
+								enabled = 0;
+							};
+							com.apple.InAppPurchase = {
+								enabled = 0;
+							};
+							com.apple.InterAppAudio = {
+								enabled = 0;
+							};
+							com.apple.Push = {
+								enabled = 0;
+							};
+							com.apple.Sandbox = {
+								enabled = 0;
+							};
+						};
+					};
+					5B7DECEDF4A9D352E6C3341A = {
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 0;
@@ -446,12 +514,21 @@
 				2DFBD9E877DD4E28C8555928,
 				911009DF7DA5175F8D5FED45,
 				67429C601811341E4971C1F3,
+				5B7DECEDF4A9D352E6C3341A,
 				F94D260570229CEFB9886A42,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		0536A8C30A65BF40C7B73921 = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0083C58E3A2206FD44AE1631,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		43F905A568486416363FD2A3 = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -482,6 +559,14 @@
 /* End PBXRezBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		4BBC429836C0381DD347FE5A = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3EE9104C7F258791A695049F,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		78D05565F02A1C0C908C03BE = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -528,6 +613,10 @@
 			isa = PBXTargetDependency;
 			target = 67429C601811341E4971C1F3;
 		};
+		40A849471F2B4DC925046945 = {
+			isa = PBXTargetDependency;
+			target = 5B7DECEDF4A9D352E6C3341A;
+		};
 		907F77BD05B4DE8BB8938846 = {
 			isa = PBXTargetDependency;
 			target = F94D260570229CEFB9886A42;
@@ -539,6 +628,10 @@
 		A953D1E8D1B2A568D985C0FF = {
 			isa = PBXTargetDependency;
 			target = 911009DF7DA5175F8D5FED45;
+		};
+		CA121390C6AD258B0D9D9354 = {
+			isa = PBXTargetDependency;
+			target = F94D260570229CEFB9886A42;
 		};
 		FAAF9F95E2EE6CF12F9DCC1A = {
 			isa = PBXTargetDependency;
@@ -587,13 +680,13 @@
 					"JucePlugin_Build_AUv3=0",
 					"JucePlugin_Build_RTAS=0",
 					"JucePlugin_Build_AAX=0",
-					"JucePlugin_Build_Standalone=0",
+					"JucePlugin_Build_Standalone=1",
 					"JucePlugin_Build_Unity=0",
 					"JucePlugin_Enable_IAA=0",
 					"JucePlugin_Name=\\\"sampler-plugin\\\"",
 					"JucePlugin_Desc=\\\"sampler-plugin\\\"",
-					"JucePlugin_Manufacturer=\\\"yourcompany\\\"",
-					"JucePlugin_ManufacturerWebsite=\\\"\\\"",
+					"JucePlugin_Manufacturer=\\\"frogLab\\\"",
+					"JucePlugin_ManufacturerWebsite=\\\"www.google.com\\\"",
 					"JucePlugin_ManufacturerEmail=\\\"\\\"",
 					"JucePlugin_ManufacturerCode=0x4d616e75",
 					"JucePlugin_PluginCode=0x486e6873",
@@ -602,24 +695,24 @@
 					"JucePlugin_ProducesMidiOutput=0",
 					"JucePlugin_IsMidiEffect=0",
 					"JucePlugin_EditorRequiresKeyboardFocus=0",
-					"JucePlugin_Version=1.0.0",
-					"JucePlugin_VersionCode=0x10000",
-					"JucePlugin_VersionString=\\\"1.0.0\\\"",
+					"JucePlugin_Version=0.0.1",
+					"JucePlugin_VersionCode=0x1",
+					"JucePlugin_VersionString=\\\"0.0.1\\\"",
 					"JucePlugin_VSTUniqueID=JucePlugin_PluginCode",
 					"JucePlugin_VSTCategory=kPlugCategSynth",
-					"JucePlugin_Vst3Category=\\\"Instrument|Synth\\\"",
+					"JucePlugin_Vst3Category=\\\"Instrument|Sampler\\\"",
 					"JucePlugin_AUMainType=\\'aumu\\'",
 					"JucePlugin_AUSubType=JucePlugin_PluginCode",
 					"JucePlugin_AUExportPrefix=samplerpluginAU",
 					"JucePlugin_AUExportPrefixQuoted=\\\"samplerpluginAU\\\"",
 					"JucePlugin_AUManufacturerCode=JucePlugin_ManufacturerCode",
-					"JucePlugin_CFBundleIdentifier=com.yourcompany.samplerplugin",
+					"JucePlugin_CFBundleIdentifier=com.frogLab.samplerplugin",
 					"JucePlugin_RTASCategory=2048",
 					"JucePlugin_RTASManufacturerCode=JucePlugin_ManufacturerCode",
 					"JucePlugin_RTASProductId=JucePlugin_PluginCode",
 					"JucePlugin_RTASDisableBypass=0",
 					"JucePlugin_RTASDisableMultiMono=0",
-					"JucePlugin_AAXIdentifier=com.yourcompany.samplerplugin",
+					"JucePlugin_AAXIdentifier=com.frogLab.samplerplugin",
 					"JucePlugin_AAXManufacturerCode=JucePlugin_ManufacturerCode",
 					"JucePlugin_AAXProductId=JucePlugin_PluginCode",
 					"JucePlugin_AAXCategory=2048",
@@ -627,14 +720,14 @@
 					"JucePlugin_AAXDisableMultiMono=0",
 					"JucePlugin_IAAType=0x61757269",
 					"JucePlugin_IAASubType=JucePlugin_PluginCode",
-					"JucePlugin_IAAName=\\\"yourcompany:\\ sampler-plugin\\\"",
+					"JucePlugin_IAAName=\\\"frogLab:\\ sampler-plugin\\\"",
 					"JucePlugin_VSTNumMidiInputs=16",
 					"JucePlugin_VSTNumMidiOutputs=16",
 					"JUCE_STANDALONE_APPLICATION=JucePlugin_Build_Standalone",
 					"JUCE_MODAL_LOOPS_PERMITTED=1",
 					"JUCER_XCODE_MAC_F6D2F4CF=1",
-					"JUCE_APP_VERSION=1.0.0",
-					"JUCE_APP_VERSION_HEX=0x10000",
+					"JUCE_APP_VERSION=0.0.1",
+					"JUCE_APP_VERSION_HEX=0x1",
 					"JUCE_SHARED_CODE=1",
 				);
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
@@ -648,7 +741,7 @@
 				INSTALL_PATH = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_HEADER_SEARCH_PATHS = "/Users/macbookprom1/Documents/juce/JUCE/modules/juce_audio_processors/format_types/VST3_SDK $(SRCROOT)/../../JuceLibraryCode /Users/macbookprom1/Documents/juce/JUCE/modules /Users/macbookprom1/Documents/juce/JUCE/modules/juce_audio_plugin_client";
-				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.samplerplugin;
+				PRODUCT_BUNDLE_IDENTIFIER = com.frogLab.samplerplugin;
 				PRODUCT_NAME = "sampler-plugin";
 				SKIP_INSTALL = YES;
 				USE_HEADERMAP = NO;
@@ -703,8 +796,8 @@
 					"JucePlugin_Enable_IAA=0",
 					"JucePlugin_Name=\\\"sampler-plugin\\\"",
 					"JucePlugin_Desc=\\\"sampler-plugin\\\"",
-					"JucePlugin_Manufacturer=\\\"yourcompany\\\"",
-					"JucePlugin_ManufacturerWebsite=\\\"\\\"",
+					"JucePlugin_Manufacturer=\\\"frogLab\\\"",
+					"JucePlugin_ManufacturerWebsite=\\\"www.google.com\\\"",
 					"JucePlugin_ManufacturerEmail=\\\"\\\"",
 					"JucePlugin_ManufacturerCode=0x4d616e75",
 					"JucePlugin_PluginCode=0x486e6873",
@@ -713,24 +806,24 @@
 					"JucePlugin_ProducesMidiOutput=0",
 					"JucePlugin_IsMidiEffect=0",
 					"JucePlugin_EditorRequiresKeyboardFocus=0",
-					"JucePlugin_Version=1.0.0",
-					"JucePlugin_VersionCode=0x10000",
-					"JucePlugin_VersionString=\\\"1.0.0\\\"",
+					"JucePlugin_Version=0.0.1",
+					"JucePlugin_VersionCode=0x1",
+					"JucePlugin_VersionString=\\\"0.0.1\\\"",
 					"JucePlugin_VSTUniqueID=JucePlugin_PluginCode",
 					"JucePlugin_VSTCategory=kPlugCategSynth",
-					"JucePlugin_Vst3Category=\\\"Instrument|Synth\\\"",
+					"JucePlugin_Vst3Category=\\\"Instrument|Sampler\\\"",
 					"JucePlugin_AUMainType=\\'aumu\\'",
 					"JucePlugin_AUSubType=JucePlugin_PluginCode",
 					"JucePlugin_AUExportPrefix=samplerpluginAU",
 					"JucePlugin_AUExportPrefixQuoted=\\\"samplerpluginAU\\\"",
 					"JucePlugin_AUManufacturerCode=JucePlugin_ManufacturerCode",
-					"JucePlugin_CFBundleIdentifier=com.yourcompany.samplerplugin",
+					"JucePlugin_CFBundleIdentifier=com.frogLab.samplerplugin",
 					"JucePlugin_RTASCategory=2048",
 					"JucePlugin_RTASManufacturerCode=JucePlugin_ManufacturerCode",
 					"JucePlugin_RTASProductId=JucePlugin_PluginCode",
 					"JucePlugin_RTASDisableBypass=0",
 					"JucePlugin_RTASDisableMultiMono=0",
-					"JucePlugin_AAXIdentifier=com.yourcompany.samplerplugin",
+					"JucePlugin_AAXIdentifier=com.frogLab.samplerplugin",
 					"JucePlugin_AAXManufacturerCode=JucePlugin_ManufacturerCode",
 					"JucePlugin_AAXProductId=JucePlugin_PluginCode",
 					"JucePlugin_AAXCategory=2048",
@@ -738,14 +831,14 @@
 					"JucePlugin_AAXDisableMultiMono=0",
 					"JucePlugin_IAAType=0x61757269",
 					"JucePlugin_IAASubType=JucePlugin_PluginCode",
-					"JucePlugin_IAAName=\\\"yourcompany:\\ sampler-plugin\\\"",
+					"JucePlugin_IAAName=\\\"frogLab:\\ sampler-plugin\\\"",
 					"JucePlugin_VSTNumMidiInputs=16",
 					"JucePlugin_VSTNumMidiOutputs=16",
 					"JUCE_STANDALONE_APPLICATION=JucePlugin_Build_Standalone",
 					"JUCE_MODAL_LOOPS_PERMITTED=1",
 					"JUCER_XCODE_MAC_F6D2F4CF=1",
-					"JUCE_APP_VERSION=1.0.0",
-					"JUCE_APP_VERSION_HEX=0x10000",
+					"JUCE_APP_VERSION=0.0.1",
+					"JUCE_APP_VERSION_HEX=0x1",
 				);
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GENERATE_PKGINFO_FILE = YES;
@@ -763,7 +856,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_HEADER_SEARCH_PATHS = "/Users/macbookprom1/Documents/juce/JUCE/modules/juce_audio_processors/format_types/VST3_SDK $(SRCROOT)/../../JuceLibraryCode /Users/macbookprom1/Documents/juce/JUCE/modules /Users/macbookprom1/Documents/juce/JUCE/modules/juce_audio_plugin_client";
 				OTHER_LDFLAGS = "-bundle -lsampler-plugin";
-				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.samplerplugin;
+				PRODUCT_BUNDLE_IDENTIFIER = com.frogLab.samplerplugin;
 				PRODUCT_NAME = "sampler-plugin";
 				USE_HEADERMAP = NO;
 				VALID_ARCHS = "i386 x86_64 arm64 arm64e";
@@ -818,8 +911,8 @@
 					"JucePlugin_Enable_IAA=0",
 					"JucePlugin_Name=\\\"sampler-plugin\\\"",
 					"JucePlugin_Desc=\\\"sampler-plugin\\\"",
-					"JucePlugin_Manufacturer=\\\"yourcompany\\\"",
-					"JucePlugin_ManufacturerWebsite=\\\"\\\"",
+					"JucePlugin_Manufacturer=\\\"frogLab\\\"",
+					"JucePlugin_ManufacturerWebsite=\\\"www.google.com\\\"",
 					"JucePlugin_ManufacturerEmail=\\\"\\\"",
 					"JucePlugin_ManufacturerCode=0x4d616e75",
 					"JucePlugin_PluginCode=0x486e6873",
@@ -828,24 +921,24 @@
 					"JucePlugin_ProducesMidiOutput=0",
 					"JucePlugin_IsMidiEffect=0",
 					"JucePlugin_EditorRequiresKeyboardFocus=0",
-					"JucePlugin_Version=1.0.0",
-					"JucePlugin_VersionCode=0x10000",
-					"JucePlugin_VersionString=\\\"1.0.0\\\"",
+					"JucePlugin_Version=0.0.1",
+					"JucePlugin_VersionCode=0x1",
+					"JucePlugin_VersionString=\\\"0.0.1\\\"",
 					"JucePlugin_VSTUniqueID=JucePlugin_PluginCode",
 					"JucePlugin_VSTCategory=kPlugCategSynth",
-					"JucePlugin_Vst3Category=\\\"Instrument|Synth\\\"",
+					"JucePlugin_Vst3Category=\\\"Instrument|Sampler\\\"",
 					"JucePlugin_AUMainType=\\'aumu\\'",
 					"JucePlugin_AUSubType=JucePlugin_PluginCode",
 					"JucePlugin_AUExportPrefix=samplerpluginAU",
 					"JucePlugin_AUExportPrefixQuoted=\\\"samplerpluginAU\\\"",
 					"JucePlugin_AUManufacturerCode=JucePlugin_ManufacturerCode",
-					"JucePlugin_CFBundleIdentifier=com.yourcompany.samplerplugin",
+					"JucePlugin_CFBundleIdentifier=com.frogLab.samplerplugin",
 					"JucePlugin_RTASCategory=2048",
 					"JucePlugin_RTASManufacturerCode=JucePlugin_ManufacturerCode",
 					"JucePlugin_RTASProductId=JucePlugin_PluginCode",
 					"JucePlugin_RTASDisableBypass=0",
 					"JucePlugin_RTASDisableMultiMono=0",
-					"JucePlugin_AAXIdentifier=com.yourcompany.samplerplugin",
+					"JucePlugin_AAXIdentifier=com.frogLab.samplerplugin",
 					"JucePlugin_AAXManufacturerCode=JucePlugin_ManufacturerCode",
 					"JucePlugin_AAXProductId=JucePlugin_PluginCode",
 					"JucePlugin_AAXCategory=2048",
@@ -853,14 +946,14 @@
 					"JucePlugin_AAXDisableMultiMono=0",
 					"JucePlugin_IAAType=0x61757269",
 					"JucePlugin_IAASubType=JucePlugin_PluginCode",
-					"JucePlugin_IAAName=\\\"yourcompany:\\ sampler-plugin\\\"",
+					"JucePlugin_IAAName=\\\"frogLab:\\ sampler-plugin\\\"",
 					"JucePlugin_VSTNumMidiInputs=16",
 					"JucePlugin_VSTNumMidiOutputs=16",
 					"JUCE_STANDALONE_APPLICATION=JucePlugin_Build_Standalone",
 					"JUCE_MODAL_LOOPS_PERMITTED=1",
 					"JUCER_XCODE_MAC_F6D2F4CF=1",
-					"JUCE_APP_VERSION=1.0.0",
-					"JUCE_APP_VERSION_HEX=0x10000",
+					"JUCE_APP_VERSION=0.0.1",
+					"JUCE_APP_VERSION_HEX=0x1",
 				);
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GENERATE_PKGINFO_FILE = YES;
@@ -879,7 +972,7 @@
 				MTL_HEADER_SEARCH_PATHS = "/Users/macbookprom1/Documents/juce/JUCE/modules/juce_audio_processors/format_types/VST3_SDK $(SRCROOT)/../../JuceLibraryCode /Users/macbookprom1/Documents/juce/JUCE/modules /Users/macbookprom1/Documents/juce/JUCE/modules/juce_audio_plugin_client";
 				OTHER_LDFLAGS = "-bundle -lsampler-plugin";
 				OTHER_REZFLAGS = "-d ppc_$ppc -d i386_$i386 -d ppc64_$ppc64 -d x86_64_$x86_64 -d arm64_$arm64 -I /System/Library/Frameworks/CoreServices.framework/Frameworks/CarbonCore.framework/Versions/A/Headers -I \"$(DEVELOPER_DIR)/Extras/CoreAudio/AudioUnits/AUPublic/AUBase\" -I \"$(DEVELOPER_DIR)/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/AudioUnit.framework/Headers\"";
-				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.samplerplugin;
+				PRODUCT_BUNDLE_IDENTIFIER = com.frogLab.samplerplugin;
 				PRODUCT_NAME = "sampler-plugin";
 				USE_HEADERMAP = NO;
 				VALID_ARCHS = "i386 x86_64 arm64 arm64e";
@@ -934,8 +1027,8 @@
 					"JucePlugin_Enable_IAA=0",
 					"JucePlugin_Name=\\\"sampler-plugin\\\"",
 					"JucePlugin_Desc=\\\"sampler-plugin\\\"",
-					"JucePlugin_Manufacturer=\\\"yourcompany\\\"",
-					"JucePlugin_ManufacturerWebsite=\\\"\\\"",
+					"JucePlugin_Manufacturer=\\\"frogLab\\\"",
+					"JucePlugin_ManufacturerWebsite=\\\"www.google.com\\\"",
 					"JucePlugin_ManufacturerEmail=\\\"\\\"",
 					"JucePlugin_ManufacturerCode=0x4d616e75",
 					"JucePlugin_PluginCode=0x486e6873",
@@ -944,24 +1037,24 @@
 					"JucePlugin_ProducesMidiOutput=0",
 					"JucePlugin_IsMidiEffect=0",
 					"JucePlugin_EditorRequiresKeyboardFocus=0",
-					"JucePlugin_Version=1.0.0",
-					"JucePlugin_VersionCode=0x10000",
-					"JucePlugin_VersionString=\\\"1.0.0\\\"",
+					"JucePlugin_Version=0.0.1",
+					"JucePlugin_VersionCode=0x1",
+					"JucePlugin_VersionString=\\\"0.0.1\\\"",
 					"JucePlugin_VSTUniqueID=JucePlugin_PluginCode",
 					"JucePlugin_VSTCategory=kPlugCategSynth",
-					"JucePlugin_Vst3Category=\\\"Instrument|Synth\\\"",
+					"JucePlugin_Vst3Category=\\\"Instrument|Sampler\\\"",
 					"JucePlugin_AUMainType=\\'aumu\\'",
 					"JucePlugin_AUSubType=JucePlugin_PluginCode",
 					"JucePlugin_AUExportPrefix=samplerpluginAU",
 					"JucePlugin_AUExportPrefixQuoted=\\\"samplerpluginAU\\\"",
 					"JucePlugin_AUManufacturerCode=JucePlugin_ManufacturerCode",
-					"JucePlugin_CFBundleIdentifier=com.yourcompany.samplerplugin",
+					"JucePlugin_CFBundleIdentifier=com.frogLab.samplerplugin",
 					"JucePlugin_RTASCategory=2048",
 					"JucePlugin_RTASManufacturerCode=JucePlugin_ManufacturerCode",
 					"JucePlugin_RTASProductId=JucePlugin_PluginCode",
 					"JucePlugin_RTASDisableBypass=0",
 					"JucePlugin_RTASDisableMultiMono=0",
-					"JucePlugin_AAXIdentifier=com.yourcompany.samplerplugin",
+					"JucePlugin_AAXIdentifier=com.frogLab.samplerplugin",
 					"JucePlugin_AAXManufacturerCode=JucePlugin_ManufacturerCode",
 					"JucePlugin_AAXProductId=JucePlugin_PluginCode",
 					"JucePlugin_AAXCategory=2048",
@@ -969,14 +1062,14 @@
 					"JucePlugin_AAXDisableMultiMono=0",
 					"JucePlugin_IAAType=0x61757269",
 					"JucePlugin_IAASubType=JucePlugin_PluginCode",
-					"JucePlugin_IAAName=\\\"yourcompany:\\ sampler-plugin\\\"",
+					"JucePlugin_IAAName=\\\"frogLab:\\ sampler-plugin\\\"",
 					"JucePlugin_VSTNumMidiInputs=16",
 					"JucePlugin_VSTNumMidiOutputs=16",
 					"JUCE_STANDALONE_APPLICATION=JucePlugin_Build_Standalone",
 					"JUCE_MODAL_LOOPS_PERMITTED=1",
 					"JUCER_XCODE_MAC_F6D2F4CF=1",
-					"JUCE_APP_VERSION=1.0.0",
-					"JUCE_APP_VERSION_HEX=0x10000",
+					"JUCE_APP_VERSION=0.0.1",
+					"JUCE_APP_VERSION_HEX=0x1",
 				);
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GENERATE_PKGINFO_FILE = YES;
@@ -995,7 +1088,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_HEADER_SEARCH_PATHS = "/Users/macbookprom1/Documents/juce/JUCE/modules/juce_audio_processors/format_types/VST3_SDK $(SRCROOT)/../../JuceLibraryCode /Users/macbookprom1/Documents/juce/JUCE/modules /Users/macbookprom1/Documents/juce/JUCE/modules/juce_audio_plugin_client";
 				OTHER_LDFLAGS = "-bundle -lsampler-plugin";
-				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.samplerplugin;
+				PRODUCT_BUNDLE_IDENTIFIER = com.frogLab.samplerplugin;
 				PRODUCT_NAME = "sampler-plugin";
 				USE_HEADERMAP = NO;
 				VALID_ARCHS = "i386 x86_64 arm64 arm64e";
@@ -1043,13 +1136,13 @@
 					"JucePlugin_Build_AUv3=0",
 					"JucePlugin_Build_RTAS=0",
 					"JucePlugin_Build_AAX=0",
-					"JucePlugin_Build_Standalone=0",
+					"JucePlugin_Build_Standalone=1",
 					"JucePlugin_Build_Unity=0",
 					"JucePlugin_Enable_IAA=0",
 					"JucePlugin_Name=\\\"sampler-plugin\\\"",
 					"JucePlugin_Desc=\\\"sampler-plugin\\\"",
-					"JucePlugin_Manufacturer=\\\"yourcompany\\\"",
-					"JucePlugin_ManufacturerWebsite=\\\"\\\"",
+					"JucePlugin_Manufacturer=\\\"frogLab\\\"",
+					"JucePlugin_ManufacturerWebsite=\\\"www.google.com\\\"",
 					"JucePlugin_ManufacturerEmail=\\\"\\\"",
 					"JucePlugin_ManufacturerCode=0x4d616e75",
 					"JucePlugin_PluginCode=0x486e6873",
@@ -1058,24 +1151,24 @@
 					"JucePlugin_ProducesMidiOutput=0",
 					"JucePlugin_IsMidiEffect=0",
 					"JucePlugin_EditorRequiresKeyboardFocus=0",
-					"JucePlugin_Version=1.0.0",
-					"JucePlugin_VersionCode=0x10000",
-					"JucePlugin_VersionString=\\\"1.0.0\\\"",
+					"JucePlugin_Version=0.0.1",
+					"JucePlugin_VersionCode=0x1",
+					"JucePlugin_VersionString=\\\"0.0.1\\\"",
 					"JucePlugin_VSTUniqueID=JucePlugin_PluginCode",
 					"JucePlugin_VSTCategory=kPlugCategSynth",
-					"JucePlugin_Vst3Category=\\\"Instrument|Synth\\\"",
+					"JucePlugin_Vst3Category=\\\"Instrument|Sampler\\\"",
 					"JucePlugin_AUMainType=\\'aumu\\'",
 					"JucePlugin_AUSubType=JucePlugin_PluginCode",
 					"JucePlugin_AUExportPrefix=samplerpluginAU",
 					"JucePlugin_AUExportPrefixQuoted=\\\"samplerpluginAU\\\"",
 					"JucePlugin_AUManufacturerCode=JucePlugin_ManufacturerCode",
-					"JucePlugin_CFBundleIdentifier=com.yourcompany.samplerplugin",
+					"JucePlugin_CFBundleIdentifier=com.frogLab.samplerplugin",
 					"JucePlugin_RTASCategory=2048",
 					"JucePlugin_RTASManufacturerCode=JucePlugin_ManufacturerCode",
 					"JucePlugin_RTASProductId=JucePlugin_PluginCode",
 					"JucePlugin_RTASDisableBypass=0",
 					"JucePlugin_RTASDisableMultiMono=0",
-					"JucePlugin_AAXIdentifier=com.yourcompany.samplerplugin",
+					"JucePlugin_AAXIdentifier=com.frogLab.samplerplugin",
 					"JucePlugin_AAXManufacturerCode=JucePlugin_ManufacturerCode",
 					"JucePlugin_AAXProductId=JucePlugin_PluginCode",
 					"JucePlugin_AAXCategory=2048",
@@ -1083,14 +1176,14 @@
 					"JucePlugin_AAXDisableMultiMono=0",
 					"JucePlugin_IAAType=0x61757269",
 					"JucePlugin_IAASubType=JucePlugin_PluginCode",
-					"JucePlugin_IAAName=\\\"yourcompany:\\ sampler-plugin\\\"",
+					"JucePlugin_IAAName=\\\"frogLab:\\ sampler-plugin\\\"",
 					"JucePlugin_VSTNumMidiInputs=16",
 					"JucePlugin_VSTNumMidiOutputs=16",
 					"JUCE_STANDALONE_APPLICATION=JucePlugin_Build_Standalone",
 					"JUCE_MODAL_LOOPS_PERMITTED=1",
 					"JUCER_XCODE_MAC_F6D2F4CF=1",
-					"JUCE_APP_VERSION=1.0.0",
-					"JUCE_APP_VERSION_HEX=0x10000",
+					"JUCE_APP_VERSION=0.0.1",
+					"JUCE_APP_VERSION_HEX=0x1",
 					"JUCE_SHARED_CODE=1",
 				);
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
@@ -1105,9 +1198,119 @@
 				LLVM_LTO = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_HEADER_SEARCH_PATHS = "/Users/macbookprom1/Documents/juce/JUCE/modules/juce_audio_processors/format_types/VST3_SDK $(SRCROOT)/../../JuceLibraryCode /Users/macbookprom1/Documents/juce/JUCE/modules /Users/macbookprom1/Documents/juce/JUCE/modules/juce_audio_plugin_client";
-				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.samplerplugin;
+				PRODUCT_BUNDLE_IDENTIFIER = com.frogLab.samplerplugin;
 				PRODUCT_NAME = "sampler-plugin";
 				SKIP_INSTALL = YES;
+				USE_HEADERMAP = NO;
+				VALID_ARCHS = "i386 x86_64 arm64 arm64e";
+			};
+			name = Release;
+		};
+		3445940E36AD1DB3BB2D0BA7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_LINK_OBJC_RUNTIME = NO;
+				CODE_SIGN_IDENTITY = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/build/$(CONFIGURATION)";
+				DEAD_CODE_STRIPPING = YES;
+				EXCLUDED_ARCHS = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"_NDEBUG=1",
+					"NDEBUG=1",
+					"JUCE_DISPLAY_SPLASH_SCREEN=1",
+					"JUCE_USE_DARK_SPLASH_SCREEN=1",
+					"JUCE_PROJUCER_VERSION=0x60106",
+					"JUCE_MODULE_AVAILABLE_juce_audio_basics=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_devices=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_formats=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_plugin_client=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_processors=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_utils=1",
+					"JUCE_MODULE_AVAILABLE_juce_core=1",
+					"JUCE_MODULE_AVAILABLE_juce_data_structures=1",
+					"JUCE_MODULE_AVAILABLE_juce_events=1",
+					"JUCE_MODULE_AVAILABLE_juce_graphics=1",
+					"JUCE_MODULE_AVAILABLE_juce_gui_basics=1",
+					"JUCE_MODULE_AVAILABLE_juce_gui_extra=1",
+					"JUCE_GLOBAL_MODULE_SETTINGS_INCLUDED=1",
+					"JUCE_VST3_CAN_REPLACE_VST2=0",
+					"JUCE_STRICT_REFCOUNTEDPOINTER=1",
+					"JucePlugin_Build_VST=0",
+					"JucePlugin_Build_VST3=0",
+					"JucePlugin_Build_AU=0",
+					"JucePlugin_Build_AUv3=0",
+					"JucePlugin_Build_RTAS=0",
+					"JucePlugin_Build_AAX=0",
+					"JucePlugin_Build_Standalone=1",
+					"JucePlugin_Build_Unity=0",
+					"JucePlugin_Enable_IAA=0",
+					"JucePlugin_Name=\\\"sampler-plugin\\\"",
+					"JucePlugin_Desc=\\\"sampler-plugin\\\"",
+					"JucePlugin_Manufacturer=\\\"frogLab\\\"",
+					"JucePlugin_ManufacturerWebsite=\\\"www.google.com\\\"",
+					"JucePlugin_ManufacturerEmail=\\\"\\\"",
+					"JucePlugin_ManufacturerCode=0x4d616e75",
+					"JucePlugin_PluginCode=0x486e6873",
+					"JucePlugin_IsSynth=1",
+					"JucePlugin_WantsMidiInput=1",
+					"JucePlugin_ProducesMidiOutput=0",
+					"JucePlugin_IsMidiEffect=0",
+					"JucePlugin_EditorRequiresKeyboardFocus=0",
+					"JucePlugin_Version=0.0.1",
+					"JucePlugin_VersionCode=0x1",
+					"JucePlugin_VersionString=\\\"0.0.1\\\"",
+					"JucePlugin_VSTUniqueID=JucePlugin_PluginCode",
+					"JucePlugin_VSTCategory=kPlugCategSynth",
+					"JucePlugin_Vst3Category=\\\"Instrument|Sampler\\\"",
+					"JucePlugin_AUMainType=\\'aumu\\'",
+					"JucePlugin_AUSubType=JucePlugin_PluginCode",
+					"JucePlugin_AUExportPrefix=samplerpluginAU",
+					"JucePlugin_AUExportPrefixQuoted=\\\"samplerpluginAU\\\"",
+					"JucePlugin_AUManufacturerCode=JucePlugin_ManufacturerCode",
+					"JucePlugin_CFBundleIdentifier=com.frogLab.samplerplugin",
+					"JucePlugin_RTASCategory=2048",
+					"JucePlugin_RTASManufacturerCode=JucePlugin_ManufacturerCode",
+					"JucePlugin_RTASProductId=JucePlugin_PluginCode",
+					"JucePlugin_RTASDisableBypass=0",
+					"JucePlugin_RTASDisableMultiMono=0",
+					"JucePlugin_AAXIdentifier=com.frogLab.samplerplugin",
+					"JucePlugin_AAXManufacturerCode=JucePlugin_ManufacturerCode",
+					"JucePlugin_AAXProductId=JucePlugin_PluginCode",
+					"JucePlugin_AAXCategory=2048",
+					"JucePlugin_AAXDisableBypass=0",
+					"JucePlugin_AAXDisableMultiMono=0",
+					"JucePlugin_IAAType=0x61757269",
+					"JucePlugin_IAASubType=JucePlugin_PluginCode",
+					"JucePlugin_IAAName=\\\"frogLab:\\ sampler-plugin\\\"",
+					"JucePlugin_VSTNumMidiInputs=16",
+					"JucePlugin_VSTNumMidiOutputs=16",
+					"JUCE_STANDALONE_APPLICATION=JucePlugin_Build_Standalone",
+					"JUCE_MODAL_LOOPS_PERMITTED=1",
+					"JUCER_XCODE_MAC_F6D2F4CF=1",
+					"JUCE_APP_VERSION=0.0.1",
+					"JUCE_APP_VERSION_HEX=0x1",
+				);
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				HEADER_SEARCH_PATHS = (
+					"/Users/macbookprom1/Documents/juce/JUCE/modules/juce_audio_processors/format_types/VST3_SDK",
+					"$(SRCROOT)/../../JuceLibraryCode",
+					"/Users/macbookprom1/Documents/juce/JUCE/modules",
+					"/Users/macbookprom1/Documents/juce/JUCE/modules/juce_audio_plugin_client",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = Info-Standalone_Plugin.plist;
+				INFOPLIST_PREPROCESS = NO;
+				LLVM_LTO = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_HEADER_SEARCH_PATHS = "/Users/macbookprom1/Documents/juce/JUCE/modules/juce_audio_processors/format_types/VST3_SDK $(SRCROOT)/../../JuceLibraryCode /Users/macbookprom1/Documents/juce/JUCE/modules /Users/macbookprom1/Documents/juce/JUCE/modules/juce_audio_plugin_client";
+				OTHER_LDFLAGS = "-lsampler-plugin";
+				PRODUCT_BUNDLE_IDENTIFIER = com.frogLab.samplerplugin;
+				PRODUCT_NAME = "sampler-plugin";
 				USE_HEADERMAP = NO;
 				VALID_ARCHS = "i386 x86_64 arm64 arm64e";
 			};
@@ -1265,8 +1468,8 @@
 					"JucePlugin_Enable_IAA=0",
 					"JucePlugin_Name=\\\"sampler-plugin\\\"",
 					"JucePlugin_Desc=\\\"sampler-plugin\\\"",
-					"JucePlugin_Manufacturer=\\\"yourcompany\\\"",
-					"JucePlugin_ManufacturerWebsite=\\\"\\\"",
+					"JucePlugin_Manufacturer=\\\"frogLab\\\"",
+					"JucePlugin_ManufacturerWebsite=\\\"www.google.com\\\"",
 					"JucePlugin_ManufacturerEmail=\\\"\\\"",
 					"JucePlugin_ManufacturerCode=0x4d616e75",
 					"JucePlugin_PluginCode=0x486e6873",
@@ -1275,24 +1478,24 @@
 					"JucePlugin_ProducesMidiOutput=0",
 					"JucePlugin_IsMidiEffect=0",
 					"JucePlugin_EditorRequiresKeyboardFocus=0",
-					"JucePlugin_Version=1.0.0",
-					"JucePlugin_VersionCode=0x10000",
-					"JucePlugin_VersionString=\\\"1.0.0\\\"",
+					"JucePlugin_Version=0.0.1",
+					"JucePlugin_VersionCode=0x1",
+					"JucePlugin_VersionString=\\\"0.0.1\\\"",
 					"JucePlugin_VSTUniqueID=JucePlugin_PluginCode",
 					"JucePlugin_VSTCategory=kPlugCategSynth",
-					"JucePlugin_Vst3Category=\\\"Instrument|Synth\\\"",
+					"JucePlugin_Vst3Category=\\\"Instrument|Sampler\\\"",
 					"JucePlugin_AUMainType=\\'aumu\\'",
 					"JucePlugin_AUSubType=JucePlugin_PluginCode",
 					"JucePlugin_AUExportPrefix=samplerpluginAU",
 					"JucePlugin_AUExportPrefixQuoted=\\\"samplerpluginAU\\\"",
 					"JucePlugin_AUManufacturerCode=JucePlugin_ManufacturerCode",
-					"JucePlugin_CFBundleIdentifier=com.yourcompany.samplerplugin",
+					"JucePlugin_CFBundleIdentifier=com.frogLab.samplerplugin",
 					"JucePlugin_RTASCategory=2048",
 					"JucePlugin_RTASManufacturerCode=JucePlugin_ManufacturerCode",
 					"JucePlugin_RTASProductId=JucePlugin_PluginCode",
 					"JucePlugin_RTASDisableBypass=0",
 					"JucePlugin_RTASDisableMultiMono=0",
-					"JucePlugin_AAXIdentifier=com.yourcompany.samplerplugin",
+					"JucePlugin_AAXIdentifier=com.frogLab.samplerplugin",
 					"JucePlugin_AAXManufacturerCode=JucePlugin_ManufacturerCode",
 					"JucePlugin_AAXProductId=JucePlugin_PluginCode",
 					"JucePlugin_AAXCategory=2048",
@@ -1300,14 +1503,14 @@
 					"JucePlugin_AAXDisableMultiMono=0",
 					"JucePlugin_IAAType=0x61757269",
 					"JucePlugin_IAASubType=JucePlugin_PluginCode",
-					"JucePlugin_IAAName=\\\"yourcompany:\\ sampler-plugin\\\"",
+					"JucePlugin_IAAName=\\\"frogLab:\\ sampler-plugin\\\"",
 					"JucePlugin_VSTNumMidiInputs=16",
 					"JucePlugin_VSTNumMidiOutputs=16",
 					"JUCE_STANDALONE_APPLICATION=JucePlugin_Build_Standalone",
 					"JUCE_MODAL_LOOPS_PERMITTED=1",
 					"JUCER_XCODE_MAC_F6D2F4CF=1",
-					"JUCE_APP_VERSION=1.0.0",
-					"JUCE_APP_VERSION_HEX=0x10000",
+					"JUCE_APP_VERSION=0.0.1",
+					"JUCE_APP_VERSION_HEX=0x1",
 				);
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GENERATE_PKGINFO_FILE = YES;
@@ -1327,7 +1530,7 @@
 				MTL_HEADER_SEARCH_PATHS = "/Users/macbookprom1/Documents/juce/JUCE/modules/juce_audio_processors/format_types/VST3_SDK $(SRCROOT)/../../JuceLibraryCode /Users/macbookprom1/Documents/juce/JUCE/modules /Users/macbookprom1/Documents/juce/JUCE/modules/juce_audio_plugin_client";
 				OTHER_LDFLAGS = "-bundle -lsampler-plugin";
 				OTHER_REZFLAGS = "-d ppc_$ppc -d i386_$i386 -d ppc64_$ppc64 -d x86_64_$x86_64 -d arm64_$arm64 -I /System/Library/Frameworks/CoreServices.framework/Frameworks/CarbonCore.framework/Versions/A/Headers -I \"$(DEVELOPER_DIR)/Extras/CoreAudio/AudioUnits/AUPublic/AUBase\" -I \"$(DEVELOPER_DIR)/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/AudioUnit.framework/Headers\"";
-				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.samplerplugin;
+				PRODUCT_BUNDLE_IDENTIFIER = com.frogLab.samplerplugin;
 				PRODUCT_NAME = "sampler-plugin";
 				USE_HEADERMAP = NO;
 				VALID_ARCHS = "i386 x86_64 arm64 arm64e";
@@ -1343,6 +1546,115 @@
 			};
 			name = Debug;
 		};
+		FA8A3ADD82AEAC4732A75EA6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_LINK_OBJC_RUNTIME = NO;
+				CODE_SIGN_IDENTITY = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/build/$(CONFIGURATION)";
+				COPY_PHASE_STRIP = NO;
+				EXCLUDED_ARCHS = "";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"_DEBUG=1",
+					"DEBUG=1",
+					"JUCE_DISPLAY_SPLASH_SCREEN=1",
+					"JUCE_USE_DARK_SPLASH_SCREEN=1",
+					"JUCE_PROJUCER_VERSION=0x60106",
+					"JUCE_MODULE_AVAILABLE_juce_audio_basics=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_devices=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_formats=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_plugin_client=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_processors=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_utils=1",
+					"JUCE_MODULE_AVAILABLE_juce_core=1",
+					"JUCE_MODULE_AVAILABLE_juce_data_structures=1",
+					"JUCE_MODULE_AVAILABLE_juce_events=1",
+					"JUCE_MODULE_AVAILABLE_juce_graphics=1",
+					"JUCE_MODULE_AVAILABLE_juce_gui_basics=1",
+					"JUCE_MODULE_AVAILABLE_juce_gui_extra=1",
+					"JUCE_GLOBAL_MODULE_SETTINGS_INCLUDED=1",
+					"JUCE_VST3_CAN_REPLACE_VST2=0",
+					"JUCE_STRICT_REFCOUNTEDPOINTER=1",
+					"JucePlugin_Build_VST=0",
+					"JucePlugin_Build_VST3=0",
+					"JucePlugin_Build_AU=0",
+					"JucePlugin_Build_AUv3=0",
+					"JucePlugin_Build_RTAS=0",
+					"JucePlugin_Build_AAX=0",
+					"JucePlugin_Build_Standalone=1",
+					"JucePlugin_Build_Unity=0",
+					"JucePlugin_Enable_IAA=0",
+					"JucePlugin_Name=\\\"sampler-plugin\\\"",
+					"JucePlugin_Desc=\\\"sampler-plugin\\\"",
+					"JucePlugin_Manufacturer=\\\"frogLab\\\"",
+					"JucePlugin_ManufacturerWebsite=\\\"www.google.com\\\"",
+					"JucePlugin_ManufacturerEmail=\\\"\\\"",
+					"JucePlugin_ManufacturerCode=0x4d616e75",
+					"JucePlugin_PluginCode=0x486e6873",
+					"JucePlugin_IsSynth=1",
+					"JucePlugin_WantsMidiInput=1",
+					"JucePlugin_ProducesMidiOutput=0",
+					"JucePlugin_IsMidiEffect=0",
+					"JucePlugin_EditorRequiresKeyboardFocus=0",
+					"JucePlugin_Version=0.0.1",
+					"JucePlugin_VersionCode=0x1",
+					"JucePlugin_VersionString=\\\"0.0.1\\\"",
+					"JucePlugin_VSTUniqueID=JucePlugin_PluginCode",
+					"JucePlugin_VSTCategory=kPlugCategSynth",
+					"JucePlugin_Vst3Category=\\\"Instrument|Sampler\\\"",
+					"JucePlugin_AUMainType=\\'aumu\\'",
+					"JucePlugin_AUSubType=JucePlugin_PluginCode",
+					"JucePlugin_AUExportPrefix=samplerpluginAU",
+					"JucePlugin_AUExportPrefixQuoted=\\\"samplerpluginAU\\\"",
+					"JucePlugin_AUManufacturerCode=JucePlugin_ManufacturerCode",
+					"JucePlugin_CFBundleIdentifier=com.frogLab.samplerplugin",
+					"JucePlugin_RTASCategory=2048",
+					"JucePlugin_RTASManufacturerCode=JucePlugin_ManufacturerCode",
+					"JucePlugin_RTASProductId=JucePlugin_PluginCode",
+					"JucePlugin_RTASDisableBypass=0",
+					"JucePlugin_RTASDisableMultiMono=0",
+					"JucePlugin_AAXIdentifier=com.frogLab.samplerplugin",
+					"JucePlugin_AAXManufacturerCode=JucePlugin_ManufacturerCode",
+					"JucePlugin_AAXProductId=JucePlugin_PluginCode",
+					"JucePlugin_AAXCategory=2048",
+					"JucePlugin_AAXDisableBypass=0",
+					"JucePlugin_AAXDisableMultiMono=0",
+					"JucePlugin_IAAType=0x61757269",
+					"JucePlugin_IAASubType=JucePlugin_PluginCode",
+					"JucePlugin_IAAName=\\\"frogLab:\\ sampler-plugin\\\"",
+					"JucePlugin_VSTNumMidiInputs=16",
+					"JucePlugin_VSTNumMidiOutputs=16",
+					"JUCE_STANDALONE_APPLICATION=JucePlugin_Build_Standalone",
+					"JUCE_MODAL_LOOPS_PERMITTED=1",
+					"JUCER_XCODE_MAC_F6D2F4CF=1",
+					"JUCE_APP_VERSION=0.0.1",
+					"JUCE_APP_VERSION_HEX=0x1",
+				);
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				HEADER_SEARCH_PATHS = (
+					"/Users/macbookprom1/Documents/juce/JUCE/modules/juce_audio_processors/format_types/VST3_SDK",
+					"$(SRCROOT)/../../JuceLibraryCode",
+					"/Users/macbookprom1/Documents/juce/JUCE/modules",
+					"/Users/macbookprom1/Documents/juce/JUCE/modules/juce_audio_plugin_client",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = Info-Standalone_Plugin.plist;
+				INFOPLIST_PREPROCESS = NO;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_HEADER_SEARCH_PATHS = "/Users/macbookprom1/Documents/juce/JUCE/modules/juce_audio_processors/format_types/VST3_SDK $(SRCROOT)/../../JuceLibraryCode /Users/macbookprom1/Documents/juce/JUCE/modules /Users/macbookprom1/Documents/juce/JUCE/modules/juce_audio_plugin_client";
+				OTHER_LDFLAGS = "-lsampler-plugin";
+				PRODUCT_BUNDLE_IDENTIFIER = com.frogLab.samplerplugin;
+				PRODUCT_NAME = "sampler-plugin";
+				USE_HEADERMAP = NO;
+				VALID_ARCHS = "i386 x86_64 arm64 arm64e";
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1351,6 +1663,15 @@
 			buildConfigurations = (
 				3C0644A2752093214E45BE03,
 				6FF353F17E640BC34B022D0F,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		4E7C823FF508D01E0EAD6BD0 = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA8A3ADD82AEAC4732A75EA6,
+				3445940E36AD1DB3BB2D0BA7,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;

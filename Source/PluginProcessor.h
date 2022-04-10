@@ -57,7 +57,10 @@ public:
     
 private:
     //==============================================================================
-    juce::Synthesiser mSampler;
+    Synthesiser mSampler;
     const int mNumVoices { 3 };
+    AudioFormatManager mFormatManager;
+    AudioFormatReader* mFormatReader { nullptr };
+    
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (SamplerpluginAudioProcessor)
 };
