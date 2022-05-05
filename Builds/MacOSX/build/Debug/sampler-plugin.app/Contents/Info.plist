@@ -9,13 +9,13 @@
 	<key>CFBundleExecutable</key>
 	<string>sampler-plugin</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.yourcompany.samplerplugin</string>
+	<string>com.frogLab.samplerplugin</string>
 	<key>CFBundleName</key>
 	<string>sampler-plugin</string>
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.0.0</string>
+	<string>0.0.1</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleSupportedPlatforms</key>
@@ -23,7 +23,7 @@
 		<string>MacOSX</string>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>1.0.0</string>
+	<string>0.0.1</string>
 	<key>DTCompiler</key>
 	<string>com.apple.compilers.llvm.clang.1_0</string>
 	<key>DTPlatformBuild</key>
@@ -45,6 +45,6 @@
 	<key>NSHighResolutionCapable</key>
 	<true/>
 	<key>NSHumanReadableCopyright</key>
-	<string></string>
+	<string>frogLab</string>
 </dict>
 </plist>

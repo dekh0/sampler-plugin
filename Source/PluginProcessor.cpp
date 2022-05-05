@@ -1,15 +1,7 @@
-/*
- ==============================================================================
- 
- This file contains the basic framework code for a JUCE plugin processor.
- 
- ==============================================================================
- */
 
 #include "PluginProcessor.h"
 #include "PluginEditor.h"
 
-//==============================================================================
 SamplerpluginAudioProcessor::SamplerpluginAudioProcessor()
 #ifndef JucePlugin_PreferredChannelConfigurations
 : AudioProcessor (BusesProperties()
@@ -29,12 +21,77 @@ SamplerpluginAudioProcessor::SamplerpluginAudioProcessor()
     }
 }
 
+void SamplerpluginAudioProcessor::prepareToPlay (double sampleRate, int samplesPerBlock)
+
+{
+    mSampler.setCurrentPlaybackSampleRate(sampleRate);
+    
+    midiCollector.reset(sampleRate);
+    
+    midiKeyboardState.reset();
+    midiKeyboardState.addListener(this);
+    
+    metronome.prepareToPlay(sampleRate, BPM);
+}
+
+void SamplerpluginAudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, juce::MidiBuffer& midiMessages)
+{
+    
+    
+    if(playState==PlayState::Playing)
+    {
+        int sampleNumber = metronome.countSamples(buffer.getNumSamples());
+        if(sampleNumber>0)
+        {
+            MidiMessage event = MidiMessage::noteOn(1, 70, uint8(70));
+            midiMessages.addEvent(event, sampleNumber);
+        }
+        
+    }
+    else
+    {
+        metronome.reset();
+    }
+    
+//    auto totalNumInputChannels  = getTotalNumInputChannels();
+//    auto totalNumOutputChannels = getTotalNumOutputChannels();
+    
+    //midiCollector.removeNextBlockOfMessages (midiMessages, buffer.getNumSamples());
+    
+    midiKeyboardState.processNextMidiBuffer (midiMessages, 0 ,
+                                             buffer.getNumSamples(), true);
+    
+    
+    //    MidiBuffer processedBuffer;
+    //
+    //    for (const auto meta : midiMessages) {
+    //     }
+    //    MidiMessage msg;
+    //    if(count % 1 == 0)
+    //    {
+    //        msg = MidiMessage::noteOn(1, 50, uint8(70));
+    //        processedBuffer.addEvent(msg, 0);
+    //        msg = MidiMessage::noteOff(1, 50, uint8(70));
+    //        processedBuffer.addEvent(msg, buffer.getNumSamples());
+    //    }
+    //    count++;
+    //
+    //           processedBuffer.addEv
+    //
+    //    midiMessages.swapWith(processedBuffer);
+    
+//    for (auto i = totalNumInputChannels; i < totalNumOutputChannels; ++i)
+//        buffer.clear (i, 0, buffer.getNumSamples());
+    
+    mSampler.renderNextBlock(buffer, midiMessages, 0, buffer.getNumSamples());
+    
+}
+
 SamplerpluginAudioProcessor::~SamplerpluginAudioProcessor()
 {
     mFormatReader = nullptr;
 }
 
-//==============================================================================
 const juce::String SamplerpluginAudioProcessor::getName() const
 {
     return JucePlugin_Name;
@@ -96,16 +153,9 @@ void SamplerpluginAudioProcessor::changeProgramName (int index, const juce::Stri
 {
 }
 
-//==============================================================================
-void SamplerpluginAudioProcessor::prepareToPlay (double sampleRate, int samplesPerBlock)
-{
-    mSampler.setCurrentPlaybackSampleRate(sampleRate);
-}
-
 void SamplerpluginAudioProcessor::releaseResources()
 {
-    // When playback stops, you can use this as an opportunity to free up any
-    // spare memory, etc.
+    
 }
 
 #ifndef JucePlugin_PreferredChannelConfigurations
@@ -115,39 +165,19 @@ bool SamplerpluginAudioProcessor::isBusesLayoutSupported (const BusesLayout& lay
     juce::ignoreUnused (layouts);
     return true;
 #else
-    // This is the place where you check if the layout is supported.
-    // In this template code we only support mono or stereo.
-    // Some plugin hosts, such as certain GarageBand versions, will only
-    // load plugins that support stereo bus layouts.
     if (layouts.getMainOutputChannelSet() != juce::AudioChannelSet::mono()
         && layouts.getMainOutputChannelSet() != juce::AudioChannelSet::stereo())
         return false;
-    
-    // This checks if the input layout matches the output layout
 #if ! JucePlugin_IsSynth
     if (layouts.getMainOutputChannelSet() != layouts.getMainInputChannelSet())
         return false;
 #endif
-    
     return true;
 #endif
 }
 #endif
 
-void SamplerpluginAudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, juce::MidiBuffer& midiMessages)
-{
-    juce::ScopedNoDenormals noDenormals;
-    auto totalNumInputChannels  = getTotalNumInputChannels();
-    auto totalNumOutputChannels = getTotalNumOutputChannels();
-    
-    
-    for (auto i = totalNumInputChannels; i < totalNumOutputChannels; ++i)
-        buffer.clear (i, 0, buffer.getNumSamples());
-    
-    mSampler.renderNextBlock(buffer, midiMessages, 0, buffer.getNumSamples());
-}
 
-//==============================================================================
 bool SamplerpluginAudioProcessor::hasEditor() const
 {
     return true; // (change this to false if you choose to not supply an editor)
@@ -158,41 +188,67 @@ juce::AudioProcessorEditor* SamplerpluginAudioProcessor::createEditor()
     return new SamplerpluginAudioProcessorEditor (*this);
 }
 
-//==============================================================================
 void SamplerpluginAudioProcessor::getStateInformation (juce::MemoryBlock& destData)
 {
-    // You should use this method to store your parameters in the memory block.
-    // You could do that either as raw data, or use the XML or ValueTree classes
-    // as intermediaries to make it easy to save and load complex data.
+
 }
 
 void SamplerpluginAudioProcessor::setStateInformation (const void* data, int sizeInBytes)
 {
-    // You should use this method to restore your parameters from this memory block,
-    // whose contents will have been created by the getStateInformation() call.
+    
 }
 
 void SamplerpluginAudioProcessor::loadFile()
 {
+    std::unique_ptr<AudioFormatReader> reader;
     juce::FileChooser chooser { "Pleace load a file" };
     if(chooser.browseForFileToOpen())
     {
-        auto file = chooser.getResult();
-        mFormatReader = mFormatManager.createReaderFor(file);
+        BigInteger range;
+        range.setRange(0, 128, true);
         
+        auto stream = chooser.getURLResult().createInputStream (URL::InputStreamOptions (URL::ParameterHandling::inAddress));
+        
+        if (stream == nullptr)
+        {
+            jassert("NULL");
+            return;
+        }
+        
+        auto reader = rawToUniquePtr (mFormatManager.createReaderFor (std::move (stream)));
+        
+        if (reader == nullptr)
+        {
+            jassert("NULL");
+            return;
+        }
+        mSampler.addSound (new SamplerSound ("", *reader, range, 64, 0.0, 0.0, 30.0));
     }
-    
-    BigInteger range;
-    range.setRange(0, 128, true);
-    
-    mSampler.addSound(new SamplerSound("sample", *mFormatReader, range, 60, 0.1, 0.1, 10.0));
+}
+
+void SamplerpluginAudioProcessor::play(){
+    playState = PlayState::Playing;
 }
 
 
-//==============================================================================
+void SamplerpluginAudioProcessor::stop(){
+    playState = PlayState::Stopped;
+}
+
 // This creates new instances of the plugin..
 juce::AudioProcessor* JUCE_CALLTYPE createPluginFilter()
 {
     return new SamplerpluginAudioProcessor();
 }
+
+void SamplerpluginAudioProcessor::setBPM(float bpm)
+{
+    metronome.prepareToPlay(getSampleRate(), bpm);
+}
+
+float SamplerpluginAudioProcessor::getBPM(void)
+{
+    return BPM;
+}
+
 
