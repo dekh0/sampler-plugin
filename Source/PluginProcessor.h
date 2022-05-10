@@ -2,10 +2,9 @@
 
 #include <JuceHeader.h>
 #include "Metronome.h"
+#include "Sequencer.h"
 
-/**
-*/
-class SamplerpluginAudioProcessor  : public juce::AudioProcessor, MidiKeyboardState::Listener
+class SamplerpluginAudioProcessor  : public juce::AudioProcessor
 {
 public:
     
@@ -57,41 +56,30 @@ public:
     
     void loadFile();
     
-    MidiKeyboardState midiKeyboardState;
-    
-    Synthesiser mSampler;
+    Synthesiser sampler1;
     
     void setBPM(float bpm);
     
     float getBPM(void);
     
-private:
     
+    juce::AudioProcessorValueTreeState& getApvts() { return apvts; }
+    
+    juce::AudioProcessorValueTreeState apvts {*this, nullptr, "Parameters", createParameters()};
+    
+private:
+    juce::AudioProcessorValueTreeState::ParameterLayout createParameters();
     float BPM {120.0};
     PlayState playState { PlayState::Stopped };
     
     Metronome metronome;
-    
-    void handleNoteOn(MidiKeyboardState* source, int midiChannel, int midiNoteNumber, float velocity) override
-        {
-//            ampEnvelope.noteOn();
-//            lastMidiNoteNumber = midiNoteNumber;
-//            lastMidiNoteHertz = MidiMessage::getMidiNoteInHertz(lastMidiNoteNumber);
-//            mIsNotePlayed = true;
-        }
+    Sequencer sequencer;
 
-        void handleNoteOff(MidiKeyboardState* source, int midiChannel, int midiNoteNumber, float velocity) override
-        {
-//            ampEnvelope.noteOff();
-//            lastPlaybackPosition = 0;
-//            mIsNotePlayed = false;
-        }
     int count = 0;
     
     const int mNumVoices { 3 };
     AudioFormatManager mFormatManager;
     AudioFormatReader* mFormatReader { nullptr };
-    //juce::MidiKeyboardState keyboardState;
-    juce::MidiMessageCollector midiCollector;
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (SamplerpluginAudioProcessor)
+    
 };

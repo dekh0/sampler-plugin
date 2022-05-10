@@ -4,19 +4,17 @@
 
 
 SamplerpluginAudioProcessorEditor::SamplerpluginAudioProcessorEditor (SamplerpluginAudioProcessor& p)
-: AudioProcessorEditor (&p), processor (p),
-midiKeyboardComponent(p.midiKeyboardState, MidiKeyboardComponent::Orientation::horizontalKeyboard)
+: AudioProcessorEditor (&p), triggerButtons(p), processor (p)
 
 {
-    mLoadButton.onClick = [&]{ processor.loadFile(); };
-    addAndMakeVisible(mLoadButton);
+    addAndMakeVisible(triggerButtons);
     
     bpmSlider.setTextBoxStyle(juce::Slider::TextBoxLeft, false, 100, 100);
     bpmSlider.setRange(20, 999);
-    bpmSlider.onValueChange = [&]{p.setBPM(bpmSlider.getValue());};
-    bpmSlider.setValue(p.getBPM());
+    bpmSlider.setValue(processor.apvts.getParameter("BPM")->getValue());
     addAndMakeVisible(bpmSlider);
- 
+    sliderAttachment = std::make_unique<juce::AudioProcessorValueTreeState::SliderAttachment>(processor.apvts, "BPM", bpmSlider);
+    
     playButton.setToggleable(true);
     playButton.setRadioGroupId(1);
     playButton.onClick = [&]{p.play();};
@@ -29,25 +27,15 @@ midiKeyboardComponent(p.midiKeyboardState, MidiKeyboardComponent::Orientation::h
     stopButton.setToggleState(true, NotificationType::dontSendNotification);
     addAndMakeVisible(stopButton);
     
-    
-    midiKeyboardComponent.setSize(100, 200);
-    midiKeyboardComponent.setKeyWidth(40);
-    midiKeyboardComponent.setLowestVisibleKey(30);
-    midiKeyboardComponent.setBounds(getLocalBounds());
-    midiKeyboardComponent.setColour(MidiKeyboardComponent::keyDownOverlayColourId, Colours::mediumturquoise);
-    midiKeyboardComponent.setColour(MidiKeyboardComponent::mouseOverKeyOverlayColourId, Colours::whitesmoke);
-    addAndMakeVisible(midiKeyboardComponent);
-    
-    setSize (500, 500);
+
+    setSize (200, 200);
 }
 
-SamplerpluginAudioProcessorEditor::~SamplerpluginAudioProcessorEditor()
-{
-}
+SamplerpluginAudioProcessorEditor::~SamplerpluginAudioProcessorEditor() {}
 
 void SamplerpluginAudioProcessorEditor::paint (juce::Graphics& g)
 {
-    g.fillAll (getLookAndFeel().findColour (juce::ResizableWindow::backgroundColourId));
+    g.fillAll (Colour(40, 60, 40));
 }
 
 void SamplerpluginAudioProcessorEditor::resized()
@@ -55,11 +43,23 @@ void SamplerpluginAudioProcessorEditor::resized()
     const int buttonWidth = 100;
     const int buttonHeight = 100;
     
-    mLoadButton.setBounds(getWidth()/2-buttonWidth/2, getHeight()/2-buttonHeight/2, buttonWidth, buttonHeight);
+    playButton.setBounds(
+                         getWidth()/2-buttonWidth/2,
+                         getHeight()/2-buttonHeight/2+200,
+                         buttonWidth,
+                         buttonHeight
+                         );
     
-    playButton.setBounds(getWidth()/2-buttonWidth/2, getHeight()/2-buttonHeight/2+200, buttonWidth, buttonHeight);
-    stopButton.setBounds(getWidth()/2-buttonWidth/2+100, getHeight()/2-buttonHeight/2+200, buttonWidth, buttonHeight);
-    midiKeyboardComponent.setBounds(0, 0, getWidth(), 100);
-    
+    stopButton.setBounds(
+                         getWidth()/2-buttonWidth/2+100,
+                         getHeight()/2-buttonHeight/2+200,
+                         buttonWidth,
+                         buttonHeight
+                         );
+
     bpmSlider.setBounds(0, 300, 300, 20);
+    
+
+    
+    triggerButtons.setBounds(30, 30, getWidth()-60, 40);
 }

@@ -3,12 +3,17 @@
 <JUCERPROJECT id="hNhSOJ" name="sampler-plugin" projectType="audioplug" useAppConfig="0"
               addUsingNamespaceToJuceHeader="1" displaySplashScreen="1" jucerFormatVersion="1"
               pluginCharacteristicsValue="pluginIsSynth,pluginWantsMidiIn"
-              pluginFormats="buildAU,buildStandalone,buildVST3" defines="JUCE_MODAL_LOOPS_PERMITTED=1"
+              pluginFormats="buildStandalone" defines="JUCE_MODAL_LOOPS_PERMITTED=1"
               pluginVST3Category="Instrument,Sampler" companyName="frogLab"
               companyCopyright="frogLab" companyWebsite="www.google.com" version="0.0.1"
-              cppLanguageStandard="17">
+              cppLanguageStandard="17" includeBinaryInJuceHeader="1">
   <MAINGROUP id="RdhS6X" name="sampler-plugin">
     <GROUP id="{4308FB34-89FF-06C6-E568-DC3669334604}" name="Source">
+      <GROUP id="{A4A9213F-428F-E3EA-8516-EC817533DAAA}" name="components">
+        <FILE id="T97IPo" name="TrigButtons.cpp" compile="1" resource="0" file="Source/TrigButtons.cpp"/>
+        <FILE id="rLX5RN" name="TrigButtons.h" compile="0" resource="0" file="Source/TrigButtons.h"/>
+      </GROUP>
+      <FILE id="cUBlnz" name="Sequencer.cpp" compile="1" resource="0" file="Source/Sequencer.cpp"/>
       <FILE id="Jgqz9m" name="Metronome.cpp" compile="1" resource="0" file="Source/Metronome.cpp"/>
       <FILE id="e31p9R" name="Metronome.h" compile="0" resource="0" file="Source/Metronome.h"/>
       <FILE id="W6jmGw" name="PluginProcessor.cpp" compile="1" resource="0"
@@ -18,6 +23,8 @@
       <FILE id="DIfXMy" name="PluginEditor.cpp" compile="1" resource="0"
             file="Source/PluginEditor.cpp"/>
       <FILE id="KuuSRM" name="PluginEditor.h" compile="0" resource="0" file="Source/PluginEditor.h"/>
+      <FILE id="A7DDv4" name="click.wav" compile="0" resource="1" file="../../../Library/Mobile Documents/com~apple~CloudDocs/Documents/samples/click.wav"/>
+      <FILE id="ZADOeZ" name="Sequencer.h" compile="0" resource="0" file="Source/Sequencer.h"/>
     </GROUP>
   </MAINGROUP>
   <JUCEOPTIONS JUCE_STRICT_REFCOUNTEDPOINTER="1" JUCE_VST3_CAN_REPLACE_VST2="0"/>
@@ -45,7 +52,9 @@
       </MODULEPATHS>
     </XCODE_MAC>
     <XCODE_IPHONE targetFolder="Builds/iOS" iosDevelopmentTeamID="fdgsdgferf" microphonePermissionNeeded="1"
-                  UIFileSharingEnabled="1" UISupportsDocumentBrowser="1" UIStatusBarHidden="1">
+                  UIFileSharingEnabled="1" UISupportsDocumentBrowser="1" UIStatusBarHidden="1"
+                  iosDeviceFamily="2" useLegacyBuildSystem="1" iCloudPermissions="0"
+                  iPadScreenOrientation="UIInterfaceOrientationLandscapeLeft,UIInterfaceOrientationLandscapeRight">
       <CONFIGURATIONS>
         <CONFIGURATION isDebug="1" name="Debug"/>
         <CONFIGURATION isDebug="0" name="Release"/>
